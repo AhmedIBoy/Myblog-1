@@ -10,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @Setter
 @Getter
-public class Post {
+public class Post_Test {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
