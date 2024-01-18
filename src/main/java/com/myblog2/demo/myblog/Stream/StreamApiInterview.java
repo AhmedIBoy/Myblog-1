@@ -19,7 +19,7 @@ public class StreamApiInterview {
 //        double asDouble = num.stream().mapToInt(e -> e).average().getAsDouble();
 //        System.out.println("Average Of All Numbers :"+asDouble);
 
-//============Square filter and average of all numbers===================
+//============filter and average of all numbers===================
 
 //    double filter = num.stream().filter(e -> e > 100).mapToInt(e -> e).average().getAsDouble();
 //        System.out.println("Filter average of all Numbers :"+filter);
@@ -52,20 +52,13 @@ public class StreamApiInterview {
 //        Integer sumFirst = num.stream().limit(5).reduce((a, b) -> a + b).get();
 //        System.out.println(sumFirst);
 
-//============Skip the First % numbers and sum that number========================
-
-//        List<Integer> skip = num.stream().skip(3).collect(Collectors.toList());
-//        System.out.println(skip);
-//
-//        Integer skipSum = num.stream().skip(3).reduce((a, b) -> a + b).get();
-//        System.out.println(skipSum);
 
 //==========find the 2nd highest/lowest numbers from the list=================
-        Integer high = num.stream().sorted(Collections.reverseOrder()).distinct().skip(1).findFirst().get();
-        System.out.println(high);
-
-        Integer lowest = num.stream().sorted().distinct().skip(1).findFirst().get();
-        System.out.println(lowest);
+//        Integer high = num.stream().sorted(Collections.reverseOrder()).distinct().skip(1).findFirst().get();
+//        System.out.println(high);
+//
+//        Integer lowest = num.stream().sorted().distinct().skip(1).findFirst().get();
+//        System.out.println(lowest);
     }
 
 }
