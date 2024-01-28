@@ -2,6 +2,7 @@ package com.myblog2.demo.myblog.controller;
 
 import com.myblog2.demo.myblog.DTO.PostDto;
 import com.myblog2.demo.myblog.service.PostService;
+import com.myblog2.demo.myblog.util.PostResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -31,13 +32,15 @@ public class PostController {
     }
 
     @GetMapping
-    public ResponseEntity<List<PostDto>> getAllPosts
+    public ResponseEntity<PostResponse> getAllPosts
             (
                 @RequestParam(name = "pageNo",required = false,defaultValue = "0") int pageNo,
-                @RequestParam(name = "pageSize",required = false,defaultValue = "3") int pageSize
+                @RequestParam(name = "pageSize",required = false,defaultValue = "3") int pageSize,
+                @RequestParam(name = "sortBy", required = false, defaultValue = "id") String sortBy,
+                @RequestParam(name = "sortDir", required = false,defaultValue = "id") String sortDir
             ){
-        List<PostDto> postDtos = postService.GetAllPost(pageNo,pageSize);
-        return new ResponseEntity<>(postDtos,HttpStatus.OK);
+        PostResponse postResponse = postService.GetAllPost(pageNo, pageSize, sortBy, sortDir);
+        return new ResponseEntity<>(postResponse,HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

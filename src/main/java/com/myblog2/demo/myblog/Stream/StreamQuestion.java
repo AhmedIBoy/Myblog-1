@@ -9,11 +9,11 @@ public class StreamQuestion {
     public static void main(String[] args) {
         List<Employe> emp = Arrays.asList
                 (
-                        new Employe("Ahmed",36,"Mumbai"),
-                        new Employe("Jabir",30,"Alibaag"),
-                        new Employe("Jawad",30,"Alibaag"),
-                        new Employe("Shuban",26,"Mumbai"),
-                        new Employe("Ali",38,"Rachi")
+                        new Employe("Ahmed",209930,36,"Mumbai"),
+                        new Employe("Jabir",83373,30,"Alibaag"),
+                        new Employe("Jawad",625262,30,"Alibaag"),
+                        new Employe("Shuban",623526,26,"Mumbai"),
+                        new Employe("Ali",72526,38,"Rachi")
                 );
 //===================Group the Employee Based On The city===============================================================
 //        Map<String, List<Employe>> groupByCity = emp.stream().collect(Collectors.groupingBy(e -> e.getCity()));

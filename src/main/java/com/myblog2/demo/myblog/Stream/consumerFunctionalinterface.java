@@ -21,10 +21,10 @@ public class consumerFunctionalinterface {
 
 //================================Employee Lists============================================
 
-        List<String>  employee = Arrays.asList("Ahmed","Mohammed","Jabir","Jawad");
-
-        Consumer<String> result = emp -> System.out.println(emp);
-        employee.forEach(result);
+//        List<String>  employee = Arrays.asList("Ahmed","Mohammed","Jabir","Jawad");
+//
+//        Consumer<String> result = emp -> System.out.println(emp);
+//        employee.forEach(result);
 
 //================================File Handling===========================================
 
